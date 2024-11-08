@@ -1,0 +1,94 @@
+// 共通的變數
+$trs: 0.2s;
+$bg-color: #C87A62;
+$text-color-light: #fff;
+$text-color-dark: #151515;
+$border-radius-default: 2px;
+$border-radius-hover: 5px;
+
+// Mixin 定義
+@mixin btnPadding($TB, $LR) {
+    padding: $TB+px $LR+px;
+    @content;
+}
+
+@mixin btnFont($weight, $size) {
+    font-weight: $weight;
+    font-size: $size+px;
+    @content;
+}
+
+// 共通按鈕樣式
+%btn-Style {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    letter-spacing: 0.08em;
+    border-radius: $border-radius-default;
+    border: 1px solid $bg-color;
+    transition: all $trs;
+}
+
+// 前台按鈕樣式: 字體樣式
+%btn-frontStyle {
+    @include btnPadding(8, 30);
+
+    @include btnFont(400, 16) {
+        font-family: 'Afacad Flux', serif;
+    }
+}
+
+// 按鈕 1: 背景顏色按鈕
+.custom-btn {
+    &.btn-bg-color {
+        @extend %btn-Style;
+        @extend %btn-frontStyle;
+        background-color: $bg-color;
+        color: $text-color-light;
+
+        &:hover {
+            background-color: $text-color-dark;
+            border-radius: $border-radius-hover;
+        }
+    }
+
+    // 按鈕 2: 外框顏色按鈕
+    &.btn-border-color {
+        @extend %btn-Style;
+        @extend %btn-frontStyle;
+        background-color: transparent;
+        color: $text-color-dark;
+
+        &:hover {
+            background-color: $bg-color;
+            color: $text-color-light;
+            border-radius: $border-radius-hover;
+        }
+    }
+}
+
+// 響應式字體尺寸
+@media (max-width: 767px) {
+
+    .btn-bg-color,
+    .btn-border-color {
+        @include btnFont(400, 16); // 手機尺寸字體
+    }
+}
+
+@media (min-width: 768px) {
+
+    .btn-bg-color,
+    .btn-border-color {
+        @include btnFont(400, 18); // 平板尺寸字體
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .btn-bg-color,
+    .btn-border-color {
+        @include btnFont(400, 20); // 桌面尺寸字體
+    }
+}
