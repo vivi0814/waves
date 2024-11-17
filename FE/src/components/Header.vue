@@ -1,18 +1,20 @@
 <template>
-  <input type="checkbox" id="checkbtn" />
-  <header>
-    <div class="logo"><router-link to="/">WAVES</router-link></div>
-    <label for="checkbtn" class="menubtn">
-      <span class="navbar1"></span>
-      <span class="navbar2"></span>
-      <span class="navbar3"></span>
-    </label>
-    <nav>
-      <router-link v-for="item in menuItems" :key="item.path" :to="item.path">
-        {{ item.name }}
-      </router-link>
-    </nav>
-  </header>
+  <div>
+    <input type="checkbox" id="checkbtn" />
+    <header>
+      <div class="logo"><router-link to="/">WAVES</router-link></div>
+      <label for="checkbtn" class="menubtn">
+        <span class="navbar1"></span>
+        <span class="navbar2"></span>
+        <span class="navbar3"></span>
+      </label>
+      <nav>
+        <router-link v-for="item in menuItems" :key="item.path" :to="item.path">
+          {{ item.name }}
+        </router-link>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script>

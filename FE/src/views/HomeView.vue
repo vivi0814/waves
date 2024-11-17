@@ -391,9 +391,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/color.scss";
-@import "../assets/scss/base.scss";
-@import "../assets/scss/btn.scss";
+@use "../assets/scss/color.scss" as *;
+@use "../assets/scss/btn.scss" as *;
 .banner {
   margin: auto;
 

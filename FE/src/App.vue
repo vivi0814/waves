@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../src/assets/Css/Reset.css";
+@use "./assets/scss/main.scss";
 
 #app {
   font-family: "Afacad Flux", sans-serif;

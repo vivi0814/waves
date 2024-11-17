@@ -1,8 +1,8 @@
 // 共通的變數
-$trs: 0.2s;
+$trs: 0.5s;
 $bg-color: #C87A62;
 $text-color-light: #fff;
-$text-color-dark: #151515;
+$text-color-dark: #121212;
 $border-radius-default: 2px;
 $border-radius-hover: 5px;
 
@@ -50,6 +50,7 @@ $border-radius-hover: 5px;
         &:hover {
             background-color: $text-color-dark;
             border-radius: $border-radius-hover;
+            border: none
         }
     }
 
