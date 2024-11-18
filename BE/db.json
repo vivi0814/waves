@@ -1,0 +1,39 @@
+{
+    "rooms": [
+        {
+            "id": 1,
+            "image": "https://picsum.photos/650/400/?random=30",
+            "name": "The Best Resort",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temporibus, sunt alias.",
+            "price": 2600
+        },
+        {
+            "id": 2,
+            "image": "https://picsum.photos/650/400/?random=31",
+            "name": "Ocean View",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum op.",
+            "price": 1900
+        },
+        {
+            "id": 3,
+            "image": "https://picsum.photos/650/400/?random=35",
+            "name": "The Secret",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optiobus, sunt alias.",
+            "price": 2400
+        },
+        {
+            "id": 4,
+            "image": "https://picsum.photos/650/400/?random=33",
+            "name": "Garden Place",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temunt alias.",
+            "price": 3800
+        },
+        {
+            "id": 5,
+            "image": "https://picsum.photos/650/400/?random=36",
+            "name": "Heaven",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temporibus, sunt alisdfas.",
+            "price": 3200
+        }
+    ]
+}

@@ -82,6 +82,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     const today = new Date();
@@ -92,48 +93,7 @@ export default {
       checkOutDate: tomorrow.toISOString().split("T")[0], // 將明天的日期格式化為 YYYY-MM-DD
       numberOfRooms: 1,
       numberOfGuests: 1, // 新增大人數
-      rooms: [
-        {
-          id: 1,
-          image: "https://picsum.photos/650/400/?random=30",
-          name: "The Best Resort",
-          intro:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temporibus, sunt alias.",
-          price: 1800,
-        },
-        {
-          id: 2,
-          image: "https://picsum.photos/650/400/?random=30",
-          name: "The Best Resort",
-          intro:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum op.",
-          price: 1800,
-        },
-        {
-          id: 3,
-          image: "https://picsum.photos/650/400/?random=30",
-          name: "The Best Resort",
-          intro:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optiobus, sunt alias.",
-          price: 1800,
-        },
-        {
-          id: 4,
-          image: "https://picsum.photos/650/400/?random=30",
-          name: "The Best Resort",
-          intro:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temunt alias.",
-          price: 1800,
-        },
-        {
-          id: 5,
-          image: "https://picsum.photos/650/400/?random=30",
-          name: "The Best Resort",
-          intro:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temporibus, sunt alisdfas.",
-          price: 1800,
-        },
-      ], // 假設這裡會有房間資料
+      rooms: [],
     };
   },
   methods: {
@@ -149,6 +109,17 @@ export default {
     goToRoomDetails(roomId) {
       // 導向房間詳細頁面的邏輯
     },
+  },
+  mounted() {
+    axios
+      .get("http://localhost:3000/rooms")
+      .then((res) => {
+        // console.log(res.data); // 取得房間資料
+        this.rooms = res.data;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   },
 };
 </script>
