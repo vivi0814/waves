@@ -134,7 +134,7 @@ nav a:hover {
     justify-content: space-around;
     transition: 2s;
     background-color: #fff;
-    z-index: 1;
+    z-index: 9999;
   }
 }
 

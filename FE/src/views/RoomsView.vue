@@ -52,20 +52,20 @@
 
       <!-- FE/src/views/RoomsView.vue -->
       <div class="room-list">
-        <h3 class="fontSize28">ROOMS</h3>
+        <h3 class="fontSize32">ROOMS</h3>
         <div class="room-cards">
-          <div
-            class="room-card"
-            v-for="room in rooms"
-            :key="room.id"
-            @click="goToRoomDetails(room.id)"
-          >
-            <div class="room-img">
-              <img :src="room.image" alt="" />
-            </div>
-            <h4 class="room-name fontSize24">{{ room.name }}</h4>
-            <p class="room-intro fontSize20">{{ room.intro }}</p>
-            <p class="fontSize20 price-tag">$ {{ room.price }}</p>
+          <div class="room-card" v-for="room in rooms" :key="room.id">
+            <router-link
+              :to="{ name: 'roomsdetails', params: { id: room.id } }"
+              class="room-link"
+            >
+              <div class="room-img">
+                <img :src="room.image[0]" alt="Room Image" />
+              </div>
+              <h4 class="room-name fontSize24">{{ room.name }}</h4>
+              <p class="room-intro fontSize20">{{ room.intro }}</p>
+              <p class="fontSize20 price-tag">$ {{ room.price }}</p>
+            </router-link>
             <div class="book-btn">
               <button
                 class="reserve-btn custom-btn btn-border-color"
@@ -178,7 +178,6 @@ label {
   display: flex;
   flex-direction: column;
 }
-
 .room-cards {
   display: flex;
   flex-direction: column;
@@ -186,39 +185,47 @@ label {
 .room-card {
   display: flex;
   flex-direction: column;
-  position: relative;
   margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #a3a3a3;
 
-  .room-img {
-    width: 300px;
+  .room-link {
+    position: relative;
+    .room-img {
+      width: 278px;
 
-    img {
-      width: 100%;
-      transition: 0.5s;
+      img {
+        width: 100%;
+        transition: 0.5s;
+      }
+    }
+    .price-tag {
+      position: absolute;
+      border: 1px solid $front_color_main;
+      padding: 5px 25px;
+      left: -15px;
+      top: 30px;
+      z-index: 10;
+      color: $color_444;
+      transition: background-color 0.5s ease-in, border 0.5s ease-in; /* 添加過渡效果 */
+    }
+    .room-name {
+      color: $color_444;
+    }
+    .room-intro {
+      color: $color_888;
+    }
+    &:hover > .price-tag {
+      color: #fff;
+      border: 1px solid $text-color-dark;
+      background-color: $text-color-dark;
+      transition: background-color 0.5s ease-in, border 0.5s ease-in;
+    }
+    &:hover > .room-img img {
+      transform: translateX(10px);
     }
   }
-  .price-tag {
-    position: absolute;
-    border: 1px solid $front_color_main;
-    padding: 5px 25px;
-    left: -15px;
-    top: 20px;
-    z-index: 10;
-    color: $color_444;
-    transition: background-color 0.5s ease-in, border 0.5s ease-in; /* 添加過渡效果 */
-  }
-  .room-intro {
-    color: $color_888;
-  }
-  &:hover > .price-tag {
-    color: #fff;
-    border: 1px solid $text-color-dark;
-    background-color: $text-color-dark;
-    transition: background-color 0.5s ease-in, border 0.5s ease-in;
-  }
-  &:hover > .room-img img {
-    transform: translateX(10px);
-  }
+
   .book-btn {
     display: flex;
     justify-content: flex-end;
@@ -239,7 +246,6 @@ label {
 @media (min-width: 768px) {
   .wrap {
     max-width: 1200px;
-    margin: auto;
   }
   .rooms-view {
     flex-direction: row;
@@ -269,12 +275,16 @@ label {
   .room-list {
     margin: 0 30px;
     align-items: center;
-
-    .room-img {
-      width: 100%;
-
-      img {
+    .room-link {
+      .room-card {
+        padding: 20px;
+      }
+      .room-img {
         width: 100%;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }

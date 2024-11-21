@@ -20,6 +20,11 @@ const router = createRouter({
       component:()=>import('../views/RoomsView.vue')
     },
     {
+      path: '/rooms/:id', // 使用 :id 作為路由參數
+      name: 'roomsdetails',
+      component: ()=>import('../views/RoomsDetailsView.vue')
+    },
+    {
       path: '/news',
       name: 'news',
       component:()=>import('../views/NewsView.vue')
