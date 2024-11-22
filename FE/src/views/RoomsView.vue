@@ -231,6 +231,7 @@ label {
     justify-content: flex-end;
   }
   .reserve-btn {
+    margin: 20px 0 10px;
     width: 200px;
   }
 }

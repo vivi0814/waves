@@ -222,5 +222,147 @@
                 }
             ]
         }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": "Autumn Travel Discounts Are Here!",
+            "content": "Enjoy special discounts this autumn and immerse yourself in the beauty of the season.",
+            "image": "https://picsum.photos/400/300/?random=45",
+            "date": "2024-11-20"
+        },
+        {
+            "id": 2,
+            "title": "Weekend Yoga Sessions Open for Registration",
+            "content": "Join our outdoor yoga classes every Saturday morning for a relaxing experience.",
+            "image": "https://picsum.photos/400/300/?random=46",
+            "date": "2024-11-18"
+        },
+        {
+            "id": 3,
+            "title": "Farm-to-Table Dining Experience",
+            "content": "Savor fresh, local ingredients at our farm-to-table dining events every weekend.",
+            "image": "https://picsum.photos/400/300/?random=47",
+            "date": "2024-11-15"
+        },
+        {
+            "id": 4,
+            "title": "Live Music Night This Friday",
+            "content": "Enjoy an evening of live acoustic music under the stars this Friday.",
+            "image": "https://picsum.photos/400/300/?random=48",
+            "date": "2024-11-17"
+        },
+        {
+            "id": 5,
+            "title": "Photography Workshop Registration Open",
+            "content": "Capture the beauty of nature with our photography workshop led by a professional.",
+            "image": "https://picsum.photos/400/300/?random=49",
+            "date": "2024-11-19"
+        },
+        {
+            "id": 6,
+            "title": "Special Winter Getaway Packages",
+            "content": "Plan your perfect winter vacation with our exclusive getaway deals.",
+            "image": "https://picsum.photos/400/300/?random=50",
+            "date": "2024-11-22"
+        },
+        {
+            "id": 7,
+            "title": "Guided Nature Hikes Every Weekend",
+            "content": "Explore the nearby trails with our guided hiking tours every weekend.",
+            "image": "https://picsum.photos/400/300/?random=51",
+            "date": "2024-11-23"
+        },
+        {
+            "id": 8,
+            "title": "Cooking Classes with Local Chefs",
+            "content": "Learn the secrets of local cuisine in our interactive cooking classes.",
+            "image": "https://picsum.photos/400/300/?random=52",
+            "date": "2024-11-14"
+        },
+        {
+            "id": 9,
+            "title": "Stargazing Night at the Countryside",
+            "content": "Experience the beauty of the night sky in our stargazing event.",
+            "image": "https://picsum.photos/400/300/?random=53",
+            "date": "2024-11-10"
+        },
+        {
+            "id": 10,
+            "title": "Wine Tasting and Vineyard Tour",
+            "content": "Enjoy a relaxing day tasting wine and touring the local vineyards.",
+            "image": "https://picsum.photos/400/300/?random=54",
+            "date": "2024-11-12"
+        },
+        {
+            "id": 11,
+            "title": "Children's Art Workshop Now Open",
+            "content": "Let your kids express their creativity in our fun art workshop.",
+            "image": "https://picsum.photos/400/300/?random=55",
+            "date": "2024-11-11"
+        },
+        {
+            "id": 12,
+            "title": "Mountain Biking Adventure",
+            "content": "Join our guided mountain biking tours and explore scenic routes.",
+            "image": "https://picsum.photos/400/300/?random=56",
+            "date": "2024-11-13"
+        },
+        {
+            "id": 13,
+            "title": "Sunset Kayaking Experience",
+            "content": "Paddle into the sunset and enjoy a serene kayaking adventure.",
+            "image": "https://picsum.photos/400/300/?random=57",
+            "date": "2024-11-09"
+        },
+        {
+            "id": 14,
+            "title": "Local Handicraft Fair",
+            "content": "Discover unique handmade goods at our local handicraft fair.",
+            "image": "https://picsum.photos/400/300/?random=58",
+            "date": "2024-11-16"
+        },
+        {
+            "id": 15,
+            "title": "Scenic Photography Contest",
+            "content": "Capture stunning scenery and win exciting prizes in our contest.",
+            "image": "https://picsum.photos/400/300/?random=59",
+            "date": "2024-11-08"
+        },
+        {
+            "id": 16,
+            "title": "Beach Bonfire Nights",
+            "content": "Join us for a cozy evening by the beach with live music and snacks.",
+            "image": "https://picsum.photos/400/300/?random=60",
+            "date": "2024-11-06"
+        },
+        {
+            "id": 17,
+            "title": "Cycling Tour Through Countryside",
+            "content": "Explore the picturesque countryside on a guided cycling tour.",
+            "image": "https://picsum.photos/400/300/?random=61",
+            "date": "2024-11-07"
+        },
+        {
+            "id": 18,
+            "title": "Exclusive Spa Treatments",
+            "content": "Indulge in our luxurious spa treatments tailored to your needs.",
+            "image": "https://picsum.photos/400/300/?random=62",
+            "date": "2024-11-05"
+        },
+        {
+            "id": 19,
+            "title": "Holiday Decoration Workshop",
+            "content": "Get festive and creative in our holiday decoration workshop.",
+            "image": "https://picsum.photos/400/300/?random=63",
+            "date": "2024-11-04"
+        },
+        {
+            "id": 20,
+            "title": "Winter Bonanza Early Bird Deals",
+            "content": "Book early for amazing discounts on our winter activities and stays.",
+            "image": "https://picsum.photos/400/300/?random=64",
+            "date": "2024-11-03"
+        }
     ]
 }
