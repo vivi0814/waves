@@ -12,25 +12,45 @@
         <router-link v-for="item in menuItems" :key="item.path" :to="item.path">
           {{ item.name }}
         </router-link>
+        <router-link v-if="isAuthenticated" to="/orders">Orders</router-link>
+        <router-link v-if="!isAuthenticated" to="/login">LogIn</router-link>
+        <!-- <button v-if="isAuthenticated" @click="logout">LogOut</button> -->
+        <router-link v-if="isAuthenticated" @click.prevent="logout" to="/"
+          >LogOut</router-link
+        >
       </nav>
     </header>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
+
 export default {
   name: "Header",
+  computed: {
+    ...mapState(["isAuthenticated"]),
+  },
   data() {
     return {
+      // isLoggedIn: false,
       menuItems: [
         { name: "About", path: "/about" },
         { name: "Rooms", path: "/rooms" },
         { name: "News", path: "/news" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact", path: "/contact" },
-        { name: "LogIn", path: "/login" },
+        // { name: "LogIn", path: "/login" },
+        // { name: "Orders", path: "/orders" },
       ],
     };
+  },
+  methods: {
+    ...mapActions(["logout"]),
+    // async logout() {
+    //   await this.logout(); // 觸發 Vuex 的登出行動
+    //   this.$router.push("/"); // 登出後導航到首頁
+    // },
   },
 };
 </script>
