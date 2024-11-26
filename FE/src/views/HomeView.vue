@@ -335,7 +335,7 @@ export default {
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quia amet veniam odio commodi ad dolore ci eaque dignissimos,llque! Nostrum optio harumuptatem aut temporibus, sunt alias.",
         },
       ],
-      videoSrc: "../src/assets/img/video/3015493-hd_1920_1080_24fps.mp4",
+      videoSrc: "/videos/3015493-hd_1920_1080_24fps.mp4",
       amenitiesText:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa dolor enim esse quam, aperiam aliquam fugit quos inventore quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa voluptatum tenetur aperiam dolorum alias, tempore ducimus eveniet nam optio harum non perspiciatis doloremque iusto sint ipsum praesentium quae excepturi fugiat eaque. Quam dolores accusantium natus aut reiciendis vero veniam exercitationem earum distinctio. Porro sint enim quam impedit nemo corrupti.",
       amenities: [
