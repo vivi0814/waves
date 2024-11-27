@@ -1,6 +1,6 @@
 <template>
   <div class="login-page">
-    <h1>Login</h1>
+    <h3 class="fontSize32">Login</h3>
     <form @submit.prevent="login" class="login-form">
       <input
         type="text"
@@ -60,6 +60,11 @@ export default {
   align-items: center;
   padding: 20px;
   animation: fadeIn 1s ease-in-out;
+  height: calc(100vh - 296px);
+  h3 {
+    text-align: center;
+    margin: 30px 0;
+  }
 }
 .login-form {
   display: flex;
