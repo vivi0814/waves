@@ -85,9 +85,14 @@ export default {
     },
   },
   mounted() {
-    axios.get("http://localhost:3000/news").then((res) => {
-      this.news = res.data;
-    });
+    axios
+      .get(
+        // "https://my-json-server.typicode.com/vivi0814/waves-json-server/news"
+        "http://localhost:3000/news"
+      )
+      .then((res) => {
+        this.news = res.data;
+      });
   },
 };
 </script>

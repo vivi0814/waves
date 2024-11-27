@@ -138,7 +138,10 @@ export default {
   mounted() {
     const roomId = this.$route.params.id; // 獲取房間 ID
     axios
-      .get(`http://localhost:3000/rooms/${roomId}`) // 根據房間 ID 獲取資料
+      .get(
+        // `https://my-json-server.typicode.com/vivi0814/waves-json-server/rooms/${roomId}`
+        `http://localhost:3000/rooms/${roomId}`
+      ) // 根據房間 ID 獲取資料
       .then((res) => {
         console.log(res.data);
         this.room = res.data; // 將獲取的資料賦值給 room
