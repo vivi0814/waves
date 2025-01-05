@@ -88,10 +88,11 @@ export default {
     axios
       .get(
         // "https://my-json-server.typicode.com/vivi0814/waves-json-server/news"
-        "http://localhost:3000/news"
+        // "http://localhost:3000/news"
+        "/data/db.json"
       )
       .then((res) => {
-        this.news = res.data;
+        this.news = res.data.news;
       });
   },
 };

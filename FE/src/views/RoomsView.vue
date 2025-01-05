@@ -114,11 +114,12 @@ export default {
     axios
       .get(
         // "https://my-json-server.typicode.com/vivi0814/waves-json-server/rooms"
-        "http://localhost:3000/rooms"
+        // "http://localhost:3000/rooms"
+        "/data/db.json"
       )
       .then((res) => {
         // console.log(res.data); // 取得房間資料
-        this.rooms = res.data;
+        this.rooms = res.data.rooms;
       })
       .catch((error) => {
         console.error(error);

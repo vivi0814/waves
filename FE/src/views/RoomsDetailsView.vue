@@ -140,11 +140,15 @@ export default {
     axios
       .get(
         // `https://my-json-server.typicode.com/vivi0814/waves-json-server/rooms/${roomId}`
-        `http://localhost:3000/rooms/${roomId}`
+        // `http://localhost:3000/rooms/${roomId}`
+        "/data/db.json"
       ) // 根據房間 ID 獲取資料
       .then((res) => {
-        console.log(res.data);
-        this.room = res.data; // 將獲取的資料賦值給 room
+        // 使用 find() 方法找到對應的房間資料
+        this.room = res.data.rooms.find((room) => room.id === parseInt(roomId));
+        if (!this.room) {
+          console.error(`Room with ID ${roomId} not found.`);
+        }
       })
       .catch((error) => {
         console.error(error); // 錯誤處理
